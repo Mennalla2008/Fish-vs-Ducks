@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    background-color: #ffeb3b;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+h1 {
+    color: red;
+    font-size: 30px;
+    animation: shake 0.5s infinite alternate;
+}
+
+button {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+@keyframes shake {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    25% { transform: translate(-2px, -2px) rotate(-2deg); }
+    50% { transform: translate(2px, -2px) rotate(2deg); }
+    75% { transform: translate(-2px, 2px) rotate(-2deg); }
+    100% { transform: translate(2px, 2px) rotate(0deg); }
+}
+
+.duck {
+    position: absolute;
+    width: 100px;
+    transition: transform 0.5s;
+}
+
+.fish {
+    position: fixed;
+    width: 500px;
+    top: 200%;
+    display: none;
+    z-index: 1000;
+}
+
+.dancing-fish {
+    position: absolute;
+    width: 50px;
+    animation: dance 1s infinite alternate;
+}
+
+@keyframes dance {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px); }
+}
